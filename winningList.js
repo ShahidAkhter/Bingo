@@ -2,28 +2,21 @@ let winList = [];
 let gridSize;
 let leastGridSize = 4;
 let mostGridSize = 10;
-gridComponent = document.getElementById(`gridComponent`);
-labelGridSize = document.getElementById(`labelGridSize`);
-gridSizeInput = document.getElementById(`gridSizeInput`);
-gridSizeSetterbtn = document.getElementById(`gridSizeSetter`);
-gridCloser = document.getElementById(`gridCloser`);
+let gridComponent = document.getElementById(`gridComponent`);
+let labelGridSize = document.getElementById(`labelGridSize`);
+let gridSizeInput = document.getElementById(`gridSizeInput`);
+let gridSizeSetterbtn = document.getElementById(`gridSizeSetter`);
+let gridCloser = document.getElementById(`gridCloser`);
 
-labelGridSize.innerText = `Enter a number between ${leastGridSize} and ${mostGridSize} for the grid size [e.g. enter 5 for a 5x5 grid]:`
+labelGridSize.innerText = `Select a number between ${leastGridSize} and ${mostGridSize} for the grid size [e.g. enter 5 for a 5x5 grid]:`
 
-document.getElementById(`gridSizeInput`).select();
+for (let i = leastGridSize; i <= mostGridSize; i++) {
+    gridSizeInput.innerHTML+=`<option value="${i}">${i}</option>`;
+}
 
 const getGridSize = async () => {
-    // document.getElementById(`gridSizeInput`).select();
-    try {
-        gridSize = parseInt(gridSizeInput.value);
-        if (gridSize == undefined || gridSizeInput.value == "" || !gridSize || gridSize < leastGridSize || gridSize > mostGridSize) {
-            gridSize = 5;
-        }
-    } catch (error) {
-        gridSize = 5;
-    }
+    gridSize=gridSizeInput.value;
     gridComponent.style.display="none";
-    gridSizeInput.value="";
 }
 
 
