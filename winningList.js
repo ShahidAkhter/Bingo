@@ -15,7 +15,7 @@ for (let i = leastGridSize; i <= mostGridSize; i++) {
 }
 
 const getGridSize = async () => {
-    gridSize=gridSizeInput.value;
+    gridSize=parseInt(gridSizeInput.value);
     gridComponent.style.display="none";
 }
 
