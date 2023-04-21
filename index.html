@@ -95,8 +95,13 @@
         <div class="mb-4">
           <label class="block mb-2 max-w-xs max-width-sm fw-normal" for="gridSizeInput" id="labelGridSize">Enter Grid
             Size:</label>
-          <input class="border border-gray-700 focus:border-blue-500 rounded-lg py-2 px-3 w-full" type="number"
-            name="gridSizeInput" id="gridSizeInput" placeholder="Enter number here...">
+          <!-- <input class="border border-gray-700 focus:border-blue-500 rounded-lg py-2 px-3 w-full" type="number" name="gridSizeInput" id="gridSizeInput" placeholder="Enter number here..."> -->
+          <select
+            class="form-select bg-white font-bold block w-full py-2 px-3 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+            id="gridSizeInput">
+            <option value="5">Select (Default is 5)</option>
+          </select>
+
         </div>
         <div class="flex justify-end">
           <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded width-sm" type="submit"
